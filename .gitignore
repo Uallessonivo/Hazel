@@ -1,8 +1,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,c++,cmake
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,c++,cmake
 .vs
-.bin
-.bin-int
+bin
+bin-int
 *.user
 *.users
 ### C++ ###
