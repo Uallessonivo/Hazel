@@ -1,3 +1,4 @@
+#include "hzpch.h"
 #include "Application.h"
 
 namespace Hazel {
@@ -12,5 +13,5 @@ namespace Hazel {
 	void Application::Run()
 	{
 		while (true);
-	}	
+	}
 }
