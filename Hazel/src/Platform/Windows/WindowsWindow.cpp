@@ -18,8 +18,24 @@ namespace Hazel {
 	WindowsWindow::~WindowsWindow()
 	{}
 
+	void WindowsWindow::OnUpdate()
+	{
+	}
+
+	void WindowsWindow::SetVSync(bool enabled)
+	{
+	}
+
+	bool WindowsWindow::IsVSync() const
+	{
+		return false;
+	}
+
 	void WindowsWindow::Init(const WindowProps& props)
 	{
 
+	}
+	void WindowsWindow::Shutdown()
+	{
 	}
 }
