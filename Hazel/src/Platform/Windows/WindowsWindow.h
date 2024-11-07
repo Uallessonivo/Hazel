@@ -24,14 +24,16 @@ namespace Hazel {
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
+
 	private:
 		GLFWwindow* m_Window;
 
 		struct WindowData
 		{
 			std::string Title;
-			unsigned int Width, Height;
-			bool VSync;
+			unsigned int Width = 0;
+			unsigned int Height = 0;
+			bool VSync = false;
 
 			EventCallbackFn EventCallback;
 		};
@@ -39,3 +41,4 @@ namespace Hazel {
 		WindowData m_Data;
 	};
 }
+
