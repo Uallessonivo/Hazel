@@ -37,6 +37,7 @@
     <ClInclude Include="src\hzpch.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Hazel\Window.h" />
+    <ClInclude Include="src\Hazel\MouseCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hazel\Application.cpp">
