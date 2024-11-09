@@ -63,17 +63,20 @@ project "Hazel"
 		}
 
 
-	filter "configurations:Debug"
-		defines "HZ_DEBUG"
-		symbols "On"
+    filter "configurations:Debug"
+    defines "HZ_DEBUG"
+    buildoptions { "/MDd", "/utf-8" }
+    symbols "On"
 
-	filter "configurations:Release"
-		defines "HZ_RELEASE"
-		optimize "On"
+    filter "configurations:Release"
+    defines "HZ_RELEASE"
+    buildoptions { "/MD", "/utf-8" }
+    optimize "On"
 
-	filter "configurations:Dist"
-		defines "HZ_DIST"
-		optimize "On"
+    filter "configurations:Dist"
+    defines "HZ_DIST"
+    buildoptions { "/MD", "/utf-8" }
+    optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
@@ -112,12 +115,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "HZ_DEBUG"
+		buildoptions { "/MDd", "/utf-8" }
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "HZ_RELEASE"
+		buildoptions { "/MD", "/utf-8" }
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "HZ_DIST"
+		buildoptions { "/MD", "/utf-8" }
 		optimize "On"
