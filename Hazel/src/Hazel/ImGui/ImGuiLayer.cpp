@@ -61,7 +61,7 @@ namespace Hazel {
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		Application& app = Application::Get();
-		io.DisplaySize = ImVec2(app.GetWindow().GetWidth(), app.GetWindow().GetWidth());
+		io.DisplaySize = ImVec2(app.GetWindow().GetWidth(), app.GetWindow().GetHeight());
 
 		float time = (float)glfwGetTime();
 		io.DeltaTime = m_Time > 0.0 ? (time - m_Time) : (1.0f / 60.0f);
@@ -114,8 +114,8 @@ namespace Hazel {
 	bool ImGuiLayer::OnMouseScrolledEvent(MouseScrolledEvent& e)
 	{
 		ImGuiIO& io = ImGui::GetIO();
-		io.MouseWheel += e.GetYOffset();
 		io.MouseWheelH += e.GetXOffset();
+		io.MouseWheel += e.GetYOffset();
 		return false;
 	}
 
